@@ -4,4 +4,5 @@ export interface UserModel {
     password: string;
     cpf: string;
     nome: string;
+    userHash: string;
 }

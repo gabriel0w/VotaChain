@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt';
 import { Database } from 'sqlite';
 import { getDatabase } from '../utils/database';
+import crypto from 'crypto';
 
 interface User {
     id?: number;
@@ -8,6 +9,7 @@ interface User {
     password: string;
     cpf: string;
     nome: string;
+    userHash? : string;
 }
 
 class UserService {
@@ -18,9 +20,11 @@ class UserService {
         // Criptografa a senha com bcrypt
         const hashedPassword = await bcrypt.hash(password, 10);
 
+        const userHash = crypto.createHash('sha256').update(email + cpf).digest('hex');
+
         await db.run(
-            'INSERT INTO users (email, password, cpf, nome) VALUES (?, ?, ?, ?)',
-            [email, hashedPassword, cpf, nome]
+            'INSERT INTO users (email, password, cpf, nome, user_hash) VALUES (?, ?, ?, ?, ?)',
+            [email, hashedPassword, cpf, nome, userHash]
         );
 
         return { ...user, password: hashedPassword };

@@ -10,12 +10,8 @@ class AuthService {
             throw new Error('Credenciais inválidas');
         }
 
-        // Geração do authHash
-        const salt = process.env.SALT;
-        const authHash = crypto.createHash('sha256').update(user.cpf + salt).digest('hex');
-
         // Incluindo o authHash no payload do JWT
-        return jwt.sign({ id: user.id, authHash }, 'secretKey', { expiresIn: '1h' });
+        return jwt.sign({ id: user.id, userHash : user.userHash }, 'secretKey', { expiresIn: '1h' });
     }
 }
 

@@ -1,19 +1,22 @@
 {
   "dependencies": {
+    "@semaphore-protocol/contracts": "^4.5.0",
+    "@semaphore-protocol/group": "^4.5.0",
+    "@semaphore-protocol/proof": "^4.5.0",
     "bcrypt": "^5.1.1",
     "express": "^4.21.1",
-    "hardhat": "^2.22.14",
     "jsonwebtoken": "^9.0.2",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@types/bcrypt": "^5.0.2",
-    "@types/chai": "^5.0.0",
     "@types/express": "^5.0.0",
     "@types/jsonwebtoken": "^9.0.7",
     "@types/mocha": "^10.0.9",
     "@types/node": "^22.7.9",
+    "hardhat": "^2.22.15",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }
