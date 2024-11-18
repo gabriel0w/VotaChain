@@ -14,6 +14,7 @@ VotaChain é uma aplicação para um sistema de votação seguro e descentraliza
 ├── scripts/                        # Scripts de deploy e interação com o contrato
 │   ├── deploy.ts                   # Script de deploy do contrato usando Hardhat
 │   └── interact.ts                 # Script de interação com o contrato
+├── api/                            # API para simular login e autenticação no gov.br 
 ├── client/                         # Interface frontend em React
 │   ├── src/                        # Código-fonte do React
 │   │   ├── components/             # Componentes reutilizáveis
