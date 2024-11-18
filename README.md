@@ -90,14 +90,6 @@ npm start
 
 ---
 
-### Uso
-
-1. **Configuração da VotingKey**: Abra a aplicação e insira seu ID de votação para gerar e configurar a VotingKey.
-2. **Geração de Prova e Nullifier**: Use a opção "Gerar Prova" para criar uma prova ZKP e o nullifier localmente.
-3. **Envio do Voto**: Após a geração da prova, envie seu voto para o contrato inteligente diretamente pela interface.
-
----
-
 ### Licença
 
 Este projeto é distribuído sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
